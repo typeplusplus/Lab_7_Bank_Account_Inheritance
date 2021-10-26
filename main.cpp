@@ -5,7 +5,7 @@
 #include "printmefirst.h"
 //#include "SavingsAccount.h"
 //#include "CheckingAccount.h"
-//#include "BankAccount.h"
+#include "BankAccount.h"
 
 using namespace std;
 
@@ -14,6 +14,21 @@ int main()
     printmefirst("Reece Doyle", "CS-116: Lab 7 - Inheritance cont.");
 
     double amount;
+
+    BankAccount Reece("S1001", 3000);
+
+    Reece.display_balance();
+
+    cout << "Account: " << Reece.get_accountNum() << endl;
+    cout << "Balance: " << Reece.get_balance() << endl;
+
+    Reece.set_accountNum("C1003");
+    cout << "New Account Name: " << Reece.get_accountNum() << endl;
+
+    Reece.deposit(3000);
+    Reece.withdraw(1000);
+
+    Reece.display_balance();
 
 /*
     Create accounts
