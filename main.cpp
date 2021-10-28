@@ -4,7 +4,7 @@
 
 #include "printmefirst.h"
 //#include "SavingsAccount.h"
-//#include "CheckingAccount.h"
+#include "CheckingAccount.h"
 #include "BankAccount.h"
 
 using namespace std;
@@ -29,6 +29,17 @@ int main()
     Reece.withdraw(1000);
 
     Reece.display_balance();
+
+    CheckingAccount Calla("C40003", 40);
+
+    Calla.CheckingAccount::deposit(5);
+    Calla.display_balance();
+
+    Calla.CheckingAccount::deposit(10);
+    Calla.CheckingAccount::deposit(5);
+    Calla.CheckingAccount::deposit(20);
+
+    Calla.display_balance();
 
 /*
     Create accounts

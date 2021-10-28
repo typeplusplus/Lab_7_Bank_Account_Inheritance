@@ -18,6 +18,7 @@ class BankAccount
 
         //Mutators
         void set_accountNum(string n);
+        void set_balance(double a);
 
         //Member functions
         void deposit(double amount);

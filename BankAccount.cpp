@@ -4,6 +4,12 @@
 
 using namespace std;
 
+BankAccount::BankAccount()
+{
+    accountNum = "";
+    balance = 0;
+}
+
 BankAccount::BankAccount(string acct, double a)
 {
     accountNum = acct;
@@ -22,13 +28,18 @@ string BankAccount::get_accountNum() const
 
 void BankAccount::display_balance() const
 {
-    cout << "Account Number: " << accountNum << endl;
-    cout << "Current Balance: " << balance << endl;
+    cout << "Account Number: " << this->accountNum << endl;
+    cout << "Current Balance: " << this->balance << endl;
 }
 
 void BankAccount::set_accountNum(string n)
 {
     accountNum = n;
+}
+
+void BankAccount::set_balance(double a)
+{
+    balance = a;
 }
 
 void BankAccount::deposit(double amount)
