@@ -11,23 +11,23 @@ CheckingAccount::CheckingAccount()
     Transactions = 0;
 }
 
-CheckingAccount::CheckingAccount(string acct, double b)
+CheckingAccount::CheckingAccount(string acct, double b): BankAccount(acct, b)
 {
     BankAccount(acct, b);
 
     Transactions = 0;
 }
 
-void CheckingAccount::deposit(double amount)
+void CheckingAccount::withdraw(double amount)
 {
-    BankAccount::deposit(amount);
+    BankAccount::withdraw(amount);
 
     CheckForFee();
 }
 
-void CheckingAccount::withdraw(double amount)
+void CheckingAccount::deposit(double amount)
 {
-    BankAccount::withdraw(amount);
+    BankAccount::deposit(amount);
 
     CheckForFee();
 }
@@ -45,11 +45,12 @@ void CheckingAccount::CheckForFee()
 
         set_balance(newBalance);
 
-        cout << "Number of Transaction: " 
+        cout << "Number of transactions: " 
              << Transactions 
              << " is over the free number of transactions of: "
              << FreeTransactions << endl;
-        cout << "Deducted $" << fixed << setprecision(2)
+        
+        cout << "Deducted: $" << fixed << setprecision(2)
              << Transaction_Fee << " from account\n";    
         
         Transactions = 0;

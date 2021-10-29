@@ -11,10 +11,11 @@ class BankAccount
         //Constructor
         BankAccount();
         BankAccount(string, double);
+
         //Accessors
         double get_balance() const;
-        string get_accountNum() const;
         void display_balance() const;
+        string get_accountNum() const;
 
         //Mutators
         void set_accountNum(string n);

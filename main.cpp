@@ -1,3 +1,5 @@
+//http://www.cplusplus.com/forum/beginner/210719/
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -19,30 +21,18 @@ int main()
 
     Reece.display_balance();
 
-    cout << "Account: " << Reece.get_accountNum() << endl;
-    cout << "Balance: " << Reece.get_balance() << endl;
-
-    Reece.set_accountNum("C1003");
-    cout << "New Account Name: " << Reece.get_accountNum() << endl;
-
-    Reece.deposit(3000);
-    Reece.withdraw(1000);
-
-    Reece.display_balance();
-
     CheckingAccount Calla("C40003", 40);
 
-    Calla.CheckingAccount::deposit(5);
     Calla.display_balance();
 
-    Calla.CheckingAccount::deposit(10);
-    Calla.CheckingAccount::deposit(5);
-    Calla.CheckingAccount::deposit(20);
+    Calla.withdraw(50);
 
-    Calla.display_balance();
+    cout << "\n";
+
+    Calla.withdraw(40);
 
 /*
-    Create accounts
+    //Create accounts
     vector<BankAccount>myAccount;
     BankAccount acct1;
     BankAccount acct2("S1002", 3000);

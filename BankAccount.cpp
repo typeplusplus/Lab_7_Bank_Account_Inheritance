@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 #include "BankAccount.h"
 
@@ -6,7 +7,7 @@ using namespace std;
 
 BankAccount::BankAccount()
 {
-    accountNum = "";
+    accountNum = "NA";
     balance = 0;
 }
 
@@ -29,7 +30,7 @@ string BankAccount::get_accountNum() const
 void BankAccount::display_balance() const
 {
     cout << "Account Number: " << this->accountNum << endl;
-    cout << "Current Balance: " << this->balance << endl;
+    cout << "Current Balance: $" << fixed << setprecision(2) << this->balance << endl;
 }
 
 void BankAccount::set_accountNum(string n)
@@ -50,9 +51,18 @@ void BankAccount::deposit(double amount)
 
 void BankAccount::withdraw(double amount)
 {
-    balance = balance - amount;
-    cout << "New Balance after Withdrawal: " << balance << endl;
-    //Need to write check amount validity
+    if(balance >= amount)
+    {
+        balance = balance - amount;
+        
+        cout << fixed << setprecision(2);
+
+        cout << "Amount being withdrawn: $" << amount << endl
+             << "New Balance after Withdrawal: $" << balance << endl;
+    }
+    else
+
+        cout << "Insufficient Balance" << endl;
 }
 
 ostream& operator <<(ostream& out, BankAccount a)
