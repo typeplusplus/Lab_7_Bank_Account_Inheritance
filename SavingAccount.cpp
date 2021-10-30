@@ -37,11 +37,11 @@ void SavingAccount::setInterestRate(double rate)
     interest_rate = rate;
 }
 
-void SavingAccount::displaybalance() const
+void SavingAccount::display_balance()
 {
-    display_balance();
+    BankAccount::display_balance();
 
-    cout << "Interest Rate: " << interest_rate << endl;
+    cout << " Interest Rate: " << interest_rate << endl;
 }
 
 double SavingAccount::getInterestRate()

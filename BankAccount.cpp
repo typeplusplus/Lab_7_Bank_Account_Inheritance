@@ -27,10 +27,10 @@ string BankAccount::get_accountNum() const
     return accountNum;
 }
 
-void BankAccount::display_balance() const
+void BankAccount::display_balance()
 {
-    cout << "Account Number: " << this->accountNum << endl;
-    cout << "Current Balance: $" << fixed << setprecision(2) << this->balance << endl;
+    cout << "\nAccount Number: " << this->accountNum;
+    cout << " Current Balance: $" << fixed << setprecision(2) << this->balance;
 }
 
 void BankAccount::set_accountNum(string n)
@@ -46,7 +46,6 @@ void BankAccount::set_balance(double a)
 void BankAccount::deposit(double amount)
 {
     balance = balance + amount;
-    cout << "New Balance after Deposit: " << balance << endl;
 }
 
 void BankAccount::withdraw(double amount)
@@ -70,4 +69,17 @@ ostream& operator <<(ostream& out, BankAccount a)
     out << a.get_balance() << a.get_accountNum();
     
     return out;
+}
+
+const bool operator ==(const BankAccount & value1, const BankAccount & value2)
+{
+    string account1 = value1.get_accountNum();
+    string account2 = value2.get_accountNum();
+
+    if(account1 == account2)
+    {
+        return true;
+    }
+    else
+        return false;
 }

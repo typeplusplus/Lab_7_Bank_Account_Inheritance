@@ -17,14 +17,11 @@ class SavingAccount : public BankAccount
         //Mutator
         void withdraw(double amount);
         void setInterestRate(double rate);
-        void displaybalance() const;
+        void display_balance();
         void monthEnd();
 
         //Accessors
         double getInterestRate();
-
-        //Operator
-        friend ostream& operator <<(ostream& out, BankAccount a);
 
     private:
         //Member Data

@@ -14,7 +14,7 @@ class BankAccount
 
         //Accessors
         double get_balance() const;
-        void display_balance() const;
+        void display_balance();
         string get_accountNum() const;
 
         //Mutators
@@ -27,6 +27,7 @@ class BankAccount
 
         //Operators overloading
         friend ostream& operator <<(ostream& out, BankAccount a);
+        friend const bool operator ==(const BankAccount & value1, const BankAccount & value2);
 
     private:
         //Member Data
