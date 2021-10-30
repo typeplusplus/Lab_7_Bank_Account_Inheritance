@@ -15,22 +15,6 @@ int main()
 {
     printmefirst("Reece Doyle", "CS-116: Lab 7 - Inheritance cont.");
 
-    double amount;
-
-    BankAccount Reece("S1001", 3000);
-
-    Reece.display_balance();
-
-    CheckingAccount Calla("C40003", 40);
-
-    Calla.display_balance();
-
-    Calla.withdraw(50);
-
-    cout << "\n";
-
-    Calla.withdraw(40);
-
 /*
     //Create accounts
     vector<BankAccount>myAccount;

@@ -23,6 +23,9 @@ class SavingAccount : public BankAccount
         //Accessors
         double getInterestRate();
 
+        //Operator
+        friend ostream& operator <<(ostream& out, BankAccount a);
+
     private:
         //Member Data
         double interest_rate;
