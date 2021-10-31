@@ -29,8 +29,7 @@ string BankAccount::get_accountNum() const
 
 void BankAccount::display_balance()
 {
-    cout << "\nAccount Number: " << this->accountNum;
-    cout << " Current Balance: $" << fixed << setprecision(2) << this->balance;
+    cout << "Account: " << accountNum << " balance is: $" << balance << "\n\n";
 }
 
 void BankAccount::set_accountNum(string n)
@@ -53,11 +52,6 @@ void BankAccount::withdraw(double amount)
     if(balance >= amount)
     {
         balance = balance - amount;
-        
-        cout << fixed << setprecision(2);
-
-        cout << "Amount being withdrawn: $" << amount << endl
-             << "New Balance after Withdrawal: $" << balance << endl;
     }
     else
 

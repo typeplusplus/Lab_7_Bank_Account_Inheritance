@@ -24,11 +24,11 @@ SavingAccount::SavingAccount(string acctNum, double b, double i): BankAccount(ac
 
 void SavingAccount::withdraw(double amount)
 {
-    withdraw(amount);
+    BankAccount::withdraw(amount);
 
-    if (get_balance() < min_balance)
+    if (get_balance() < this->min_balance)
     {
-        min_balance = get_balance();
+        min_balance = BankAccount::get_balance();
     }
 }
 
@@ -39,9 +39,9 @@ void SavingAccount::setInterestRate(double rate)
 
 void SavingAccount::display_balance()
 {
+    cout << "Savings Account " << get_accountNum() << " Interest Rate: " << interest_rate << endl;
+    
     BankAccount::display_balance();
-
-    cout << " Interest Rate: " << interest_rate << endl;
 }
 
 double SavingAccount::getInterestRate()

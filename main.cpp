@@ -15,6 +15,7 @@ using namespace std;
 int main()
 {
     printmefirst("Reece Doyle", "CS-116: Lab 7 - Inheritance cont.");
+    double amount;
 
     //Create accounts
     vector<BankAccount>myAccount;
@@ -26,7 +27,7 @@ int main()
     cout << fixed << setprecision(2);
     mySaving.set_accountNum ("S1001");
     mySaving.display_balance();
-    acct1.set_accountNum("S1001");
+    acct1.set_accountNum("S1000");
     acct2.set_accountNum("S1002");
     acct1.deposit(2000);
     
@@ -43,8 +44,6 @@ int main()
     double withdrawAmt = 200;
     for(unsigned int n = 0; n < myAccount.size(); n++)
     {
-        myAccount[n].display_balance();
-
         if(myAccount[n].get_accountNum() == acctNum)
         {
             cout << "Withdraw $" << withdrawAmt << " from account " << acctNum << endl;
@@ -52,38 +51,41 @@ int main()
             myAccount[n].display_balance();
         }
     }
-    double amount;
 
     myChecking.set_accountNum("C1001");
     amount = 4500;
-    cout << "Account: " << myChecking.get_accountNum() << ": Deposit " << amount << endl;
+    cout << "Account: " << myChecking.get_accountNum() << ": Deposit $" << amount << endl;
     myChecking.deposit(amount);
     myChecking.display_balance();
-
+/*
     amount = 150;
-    cout << "Account: " << myChecking.get_accountNum() << ": Deposit " << amount << endl;
+    cout << "Account: " << myChecking.get_accountNum() << ": Deposit $" << amount << endl;
     myChecking.deposit(amount);
     myChecking.display_balance();
-
+*/
+/*
     amount = 100;
-    cout << "Account: " << myChecking.get_accountNum() << ": Withdraw " << amount << endl;
+    cout << "Account: " << myChecking.get_accountNum() << ": Withdraw $" << amount << endl;
     myChecking.withdraw(amount);
     myChecking.display_balance();
-
+*/
+/*
     amount = 550;
-    cout << "Account: " << myChecking.get_accountNum() << ": Withdraw " << amount << endl;
+    cout << "Account: " << myChecking.get_accountNum() << ": Withdraw $" << amount << endl;
     myChecking.withdraw(amount);
     myChecking.display_balance();
-
+*/
+/*
     cout << "\nSaving account month end\n";
     mySaving.display_balance();
     mySaving.monthEnd();
     mySaving.display_balance();
-
+*/
+/*
     amount = 4000;
-    cout << "Account: " << mySaving.get_accountNum() << ": Withdraw " << amount << endl;
+    cout << "Account: " << mySaving.get_accountNum() << ": Withdraw $" << amount << endl;
     mySaving.withdraw(amount);
     mySaving.display_balance();
-
+*/
     return 0;
 }
